@@ -1,4 +1,4 @@
-package com.example.demo;
+package com.example.demo.inquiry;
 
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotNull;
