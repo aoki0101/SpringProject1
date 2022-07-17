@@ -1,4 +1,4 @@
-package com.example.demo;
+package com.example.demo.app.survey;
 
 import javax.validation.constraints.Max;
 import javax.validation.constraints.Min;
