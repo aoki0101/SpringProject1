@@ -56,7 +56,7 @@ public class InquiryController {
 	@GetMapping("/form")
 	public String form(InquiryForm inquiryForm,Model model) {
 		model.addAttribute("title","inquiry Form");
-		return "inquiry/form";
+		return "inquiry/form_boot";
 	}
 	
 	@PostMapping("/form")
@@ -64,7 +64,7 @@ public class InquiryController {
 			Model model,
 			@ModelAttribute("complete") String complete) {
 		model.addAttribute("title","inquiry Form");
-		return "inquiry/form";
+		return "inquiry/form_boot";
 	}
 	
 	@PostMapping("/confirm")
@@ -73,10 +73,10 @@ public class InquiryController {
 			Model model) {
 		if(result.hasErrors()) {
 			model.addAttribute("title","Inquiry Form");
-			return "inquiry/form";
+			return "inquiry/form_boot";
 		}
 		model.addAttribute("title", "Confirm Page");
-		return "inquiry/confirm";
+		return "inquiry/confirm_boot";
 	}
 	
 	@PostMapping("/complete")
@@ -86,7 +86,7 @@ public class InquiryController {
 			RedirectAttributes redirectAttributes) {
 			if(result.hasErrors()) {
 				model.addAttribute("title", "InquiryForm");
-				return "inquiry/form";
+				return "inquiry/form_boot";
 			}
 			
 			Inquiry inquiry = new Inquiry();

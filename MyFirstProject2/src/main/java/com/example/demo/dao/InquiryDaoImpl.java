@@ -35,6 +35,7 @@ public class InquiryDaoImpl implements InquiryDao {
 		for(Map<String, Object> result : resultList) {
 			Inquiry inquiry = new Inquiry();
 			inquiry.setId((int)result.get("id"));
+			inquiry.setEmail((String)result.get("email"));
 			inquiry.setName((String)result.get("name"));
 			inquiry.setContents((String)result.get("contents"));
 			inquiry.setCreated(((Timestamp)result.get("created")).toLocalDateTime());
